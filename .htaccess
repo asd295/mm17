@@ -1,0 +1,15 @@
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Сделайте пакет «ea-php55» языком программирования «PHP» по умолчанию.
+<IfModule mime_module>
+  AddType application/x-httpd-ea-php55 .php .php5 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.xn----8sbouhmun4i.xn--p1ai$ [NC]
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^(.*)$ http://xn----8sbouhmun4i.xn--p1ai/$1 [R=301,L]
+</IfModule>
